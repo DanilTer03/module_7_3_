@@ -1,6 +1,5 @@
 import os
 
-
 class WordsFinder:
     def __init__(self, *file_names):
         self.file_names = file_names
@@ -10,7 +9,7 @@ class WordsFinder:
         punctuation = [',', '.', '=', '!', '?', ';', ':', ' - ']
 
         for file_name in self.file_names:
-            if os.path.isfile(file_name):
+            if os.path.isfile(file_name): #Проверка наличия файла
                 with open(file_name, 'r', encoding='utf-8') as file:
                     words = []
                     for line in file:
